@@ -1,0 +1,24 @@
+<!-- 6: For Each Loop
+    a. Use forEach() to print each fruit in uppercase.
+    b. Create an array of numbers and display each doubled value. -->
+
+<html>
+    <head>
+        <title>Loop Webpage</title>
+    </head>
+    <body>
+        <script>
+            fruits = ["apples", "Bananas", "Oranges", "Grapes"]
+
+            fruits.forEach(function(fruit) {
+                document.write(fruit.toUpperCase() + "<br>");
+            });
+            
+            numbers = [1, 2, 3, 4, 5]
+            
+            numbers.forEach(function(number) {
+                document.write((number * 2) + "<br>");
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!-- 11: Windows & Frames
+    i. Open a new browser window using window.open().
+    ii. Resize it using window.resizeTo().
+    iii. Close it after 5 seconds using setTimeout(). -->
+
+<html>
+    <head>
+        <title>Windows & Frames</title>
+    </head>
+    <body>
+        <script>
+            let newWindow = window.open("", "newWindow", "width=500,height=500");
+
+            if (newWindow) {
+                newWindow.resizeTo(400, 300);
+                setTimeout(() => {
+                    newWindow.close();
+                }, 5000);
+            }
+        </script>
+    </body>
+</html>

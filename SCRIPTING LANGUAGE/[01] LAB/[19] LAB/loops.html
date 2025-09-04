@@ -1,0 +1,20 @@
+<!-- 19: DOM with Loops
+    1. Select all <p> tags with querySelectorAll().
+    2. Use a loop to change text color to green. -->
+
+<html>
+<head>
+    <title>Loops</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptates odio incidunt illum, in dolore atque omnis nulla dolorum laudantium, doloribus voluptatem eligendi maxime reprehenderit dicta quod molestiae eaque dolores.</p>
+
+    <script>
+        let paragraphs = document.querySelectorAll('p');
+
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].style.color = 'green';
+        }
+    </script>
+</body>
+</html>

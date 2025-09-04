@@ -1,0 +1,41 @@
+<!-- 10: Interacting with Browser (Alert, Confirm, Prompt)
+    a. Use alert() to display "Welcome".
+    b. Use prompt() to get user’s name and greet them.
+    c. Create a confirm() dialog asking "Do you really want to delete this file?".
+        i. If the user clicks OK → alert "File deleted".
+        i. If Cancel → alert "Deletion canceled".
+    d. Prompt the user with "What is 5 + 3?".
+        i. If the answer is "8" → alert "Correct!".
+        ii. Otherwise → alert "Try again". -->
+
+<html>
+    <head>
+        <title>Interacting with Browser</title>
+    </head>
+    <body>
+        <script>
+            alert("Welcome"); 
+
+            name = prompt("What your name: ");
+            if(name){
+            alert("Hello " + name + "." );
+            }
+
+
+            let confirmDelete = confirm("Do you really want to delete this file?")
+            if(confirmDelete){
+                alert("File Deleted");
+            }else{
+                alert("Deletion Cancled");
+            }
+
+            let value = prompt("What is 5 + 3 ?");
+            if(value === 8){
+                alert("Correct Value");
+            }else{
+                alert("Try Again");
+            }
+
+        </script>
+    </body>
+</html>

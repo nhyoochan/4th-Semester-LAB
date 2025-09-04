@@ -1,0 +1,26 @@
+<!-- 17: Handling Regular Expressions
+    1. Create a e that checks if a string contains numbers.
+    2. Test if "abc123" passes.
+    3. Validate if email is in correct format. -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expression Handling</title>
+</head>
+<body>
+    <h2>Regular Expression Handling</h2>
+    
+    <script>
+        let regexNumbers = /\d+/;
+
+        let testString = "abc123";
+        console.log(`Does "${testString}" contain numbers?`, regexNumbers.test(testString)); 
+        
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let email = "example@mail.com";
+        console.log(`Is "${email}" a valid email?`, emailRegex.test(email));
+    </script>
+</body>
+</html>

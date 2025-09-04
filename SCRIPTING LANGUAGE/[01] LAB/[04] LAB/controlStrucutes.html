@@ -1,0 +1,49 @@
+<!-- 4: Control Structures
+        a. Ask the user for a number using prompt().
+        b. If number is positive → alert “Positive”.
+        c. If negative → alert “Negative”.
+        d. Use a switch to check if today is Monday, Tuesday, etc. -->
+
+<html>
+    <head>
+        <title>Control Structures</title>
+    </head>
+    <body>
+        <script>
+            var inputNum =prompt("Enter the Number: ")
+            
+            if (inputNum > 0){
+                alert("Positive Number")
+            }else{
+                alert("Negative Number")
+            }
+            
+            var today =  new Date();
+
+            switch (today.getDay()) {
+                case 0:
+                    alert("Today is Sunday");
+                    break;
+                case 1:
+                    alert("Today is Monday");
+                    break;
+                case 2:
+                    alert("Today is Tuesday");
+                    break;
+                case 3:
+                    alert("Today is Wednesday");
+                    break;
+                case 4:
+                    alert("Today is Thursday");
+                    break;
+                case 5:
+                    alert("Today is Friday");
+                    break;
+                case 6:
+                    alert("Today is Saturday");
+                    break;
+            }
+
+            </script>
+    </body>
+</html>

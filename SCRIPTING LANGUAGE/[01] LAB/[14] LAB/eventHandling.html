@@ -1,0 +1,35 @@
+<!-- 14: Event Handling
+    1. Add a button with onclick event that changes background color.
+    2. Add mouseover and mouseout events on an image to change it. -->  
+
+<html>
+<head>
+    <title>Event Handling</title>
+</head>
+<body id="body" style="text-align:center; margin-top:50px;">
+
+    <button onclick="changeBackground()">Change Background Color</button>
+
+    <br><br>
+
+    <img id="hoverImg" src="https://via.placeholder.com/200x150?text=Original" 
+         onmouseover="changeImage()" 
+         onmouseout="resetImage()" 
+         style="cursor:pointer;">
+
+    <script>
+        function changeBackground() {
+            document.getElementById("body").style.backgroundColor = "lightblue";
+        }
+
+        function changeImage() {
+            document.getElementById("hoverImg").src = "img1.jpg";
+        }
+
+        function resetImage() {
+            document.getElementById("hoverImg").src = "img2.jpeg";
+        }
+    </script>
+
+</body>
+</html>

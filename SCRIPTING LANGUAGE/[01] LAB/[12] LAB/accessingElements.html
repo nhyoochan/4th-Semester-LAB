@@ -1,0 +1,18 @@
+<!-- DOM – Accessing Elements
+    i. Use getElementById() to change a heading text.
+    ii. Use querySelector() to change paragraph color to blue. -->
+
+<html>
+    <head>
+        <title>Accessing Elements</title>
+    </head>
+    <body>
+
+        <h1 id = "mainHeading">Heading 1!</h1>
+        <p>Paragraph 1!</p>
+        <script>
+            document.getElementById("mainHeading").textContent = "Heading 2!";
+            document.querySelector("p").style.color = "blue";
+        </script>
+    </body>
+</html>

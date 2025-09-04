@@ -1,0 +1,25 @@
+<!-- 13: DOM – Creating and Removing Elements
+    1. Create a new <li> item in an unordered list.
+    2. Remove the last list item. -->
+
+<html>
+    <head>
+        <title>Creating and Removing Elements</title>
+    </head>
+    <body>
+
+        <ul id = "myList">
+            <li>List 1</li>
+            <li>List 2</li>
+        </ul>
+
+        <script>
+            let ul = document.getElementById("myList");
+            let newLi = document.createElement("li");
+            newLi.textContent = "New Item";
+            ul.appendChild(newLi);
+
+            ul.removeChild(ul.lastElementChild);
+        </script>
+    </body>
+</html>

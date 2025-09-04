@@ -1,0 +1,45 @@
+<!-- 16: Cookies
+    1. Create a cookie named username with your name.
+    2. Read and display the cookie value.
+    3. Delete the cookie. -->
+
+<html>
+<head>
+    <title>cookies</title>
+</head>
+<body>
+    <form name="myform" action="">
+        Enter name: 
+        <input type="text" name="customer"/>
+        <input type="button" value="Set Cookie" onclick="setCookie();"/>
+        <input type="button" value="Get Cookie" onclick="getCookie();"/>
+        <input type="button" value="Delete Cookie" onclick="deleteCookie();"/>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        function setCookie() {
+            let name = document.myform.customer.value;
+            document.cookie = "username=" + encodeURIComponent(name) + "; path=/";
+            document.getElementById("output").innerText = "Cookie Set: username=" + name;
+        }
+
+        function getCookie() {
+            let cookies = document.cookie.split('; ');
+            let username = '';
+            for (let i = 0; i < cookies.length; i++) {
+                let [key, value] = cookies[i].split('=');
+                if (key === 'username') {
+                    username = decodeURIComponent(value);
+                }
+            }
+            document.getElementById("output").innerText = username ? "Cookie Value: " + username : "No username cookie found.";
+        }
+
+        function deleteCookie() {
+            document.getElementById("output").innerText = "Cookie Deleted.";
+        }
+    </script>
+</body>
+</html>

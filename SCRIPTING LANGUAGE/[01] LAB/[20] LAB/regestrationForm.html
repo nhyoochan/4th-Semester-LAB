@@ -1,0 +1,64 @@
+<!-- 20: Mini Project – Registration Form
+    1. Create a registration form with name, email, DOB, and password.
+    2. Validate:
+        i. Name not empty
+        ii. Email format correct
+        iii. Password length >= 8
+    3. Store username in cookies.
+    4. Display success message in DOM -->
+
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+        Name: <input type="text" id="name" required><br><br>
+        Email: <input type="email" id="email" required><br><br>
+        DOB: <input type="date" id="dob" required><br><br>
+        Password: <input type="password" id="password" required><br><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <div id="message" style="margin-top:20px; font-weight:bold;"></div>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const messageDiv = document.getElementById('message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById('name').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let dob = document.getElementById('dob').value;
+            let password = document.getElementById('password').value;
+
+            if (name === "") {
+                messageDiv.textContent = "Name cannot be empty!";
+                messageDiv.style.color = "red";
+                return;
+            }
+
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                messageDiv.textContent = "Invalid email format!";
+                messageDiv.style.color = "red";
+                return;
+            }
+
+            if (password.length < 8) {
+                messageDiv.textContent = "Password must be at least 8 characters!";
+                messageDiv.style.color = "red";
+                return;
+            }
+
+            messageDiv.textContent = `Registration successful! Welcome, ${name}.`;
+            messageDiv.style.color = "green";
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>

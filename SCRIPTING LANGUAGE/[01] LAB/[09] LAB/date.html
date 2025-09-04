@@ -1,0 +1,41 @@
+<!-- 9: Date Objects
+        a. Show today’s date in dd-mm-yyyy format.
+        b. Display current hours and minutes.
+        c. Add 7 days to the current date and display it. -->
+
+<html>
+<head>
+    <title>Date Webpage</title>
+</head>
+<body>
+    <script>
+        var todaysDate = new Date();
+
+        var day = todaysDate.getDate();
+        var month = todaysDate.getMonth() + 1;
+        var year = todaysDate.getFullYear();
+        var formattedDate = 
+            (day < 10 ? '0' + day : day) + '-' + 
+            (month < 10 ? '0' + month : month) + '-' + 
+            year;
+
+        var hrs = todaysDate.getHours();
+        var min = todaysDate.getMinutes();
+        var formattedTime = hrs + ":" + (min < 10 ? "0" + min : min);
+
+        var futureDate = new Date(todaysDate);
+        futureDate.setDate(futureDate.getDate() + 7);
+        var futureDay = futureDate.getDate();
+        var futureMonth = futureDate.getMonth() + 1;
+        var futureYear = futureDate.getFullYear();
+        var formattedFutureDate = 
+            (futureDay < 10 ? '0' + futureDay : futureDay) + '-' + 
+            (futureMonth < 10 ? '0' + futureMonth : futureMonth) + '-' + 
+            futureYear;
+
+        document.write("Today's Date is: " + formattedDate + "<br>");
+        document.write("Current Time is: " + formattedTime + "<br>");
+        document.write("Date After 7 Days: " + formattedFutureDate);
+    </script>
+</body>
+</html>
