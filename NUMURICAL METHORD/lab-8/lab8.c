@@ -1,3 +1,5 @@
+//SOLUTION OF SYSTEM OF LINEAR EQUATION BY USING GAUSS ELIMINATION METHOD
+
 #include<stdio.h>  
 #include<conio.h>  
 #include<math.h>  

@@ -1,3 +1,5 @@
+//ROOT FINDING USING NEWTON RAPHSON (NR) METHOD
+
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>

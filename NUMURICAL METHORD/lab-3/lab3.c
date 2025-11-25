@@ -1,3 +1,5 @@
+//IMPLEMENTATION OF LAGRANGE INTERPOLATION METHOD
+
 #include<stdio.h>
 
 int main(){

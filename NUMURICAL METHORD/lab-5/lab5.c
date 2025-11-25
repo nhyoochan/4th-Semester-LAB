@@ -1,3 +1,5 @@
+//IMPLEMENTATION OF NUMERICAL INTEGRATION USING TRAPEZOIDAL METHOD
+
 #include<stdio.h>  
 #include<conio.h>  
 #include<math.h>  

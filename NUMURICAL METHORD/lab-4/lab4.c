@@ -1,3 +1,5 @@
+//IMPLEMENTATION OF LEAST SQUARE METHOD (LINEAR REGRESSION  y=a+bx)
+
 #include<stdio.h>
 
 int main(){ 

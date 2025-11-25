@@ -1,3 +1,5 @@
+//ROOT FINDING USING BSECTION METHOD AND FALSE POSITION METHOD
+
 #include<stdio.h>
 #include<math.h>
 #define f(x) x*log10(x) - 1.2

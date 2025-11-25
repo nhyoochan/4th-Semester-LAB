@@ -1,3 +1,5 @@
+//IMPLEMENTATION OF NUMERICAL INTEGRATION USING SIMPSON 3/8 METHOD
+
 #include<stdio.h> 
 #include<math.h> 
 #define f(x) 1/(1+x*x)

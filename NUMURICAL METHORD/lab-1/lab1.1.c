@@ -1,4 +1,6 @@
-#include<stdio.h> 
+//ROOT FINDING USING BSECTION METHOD AND FALSE POSITION METHOD
+
+#include<stdio.h>
 #include<math.h>
 
 #define f(x) pow(x,3)+3*x-5
