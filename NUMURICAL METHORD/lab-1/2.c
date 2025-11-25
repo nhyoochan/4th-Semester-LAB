@@ -2,7 +2,6 @@
 #include<math.h>
 #define f(x) x*log10(x) - 1.2
 
-
 int main() {
     float x0, x1, x2, f0, f1, f2, e;
     int step = 1;
