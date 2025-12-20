@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+</head>
+
+<style>
+  input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+</style>
+
+<body>
+
+  <h2>Enter Student Details</h2>
+  <form action="03-insert-student.php" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label for="marks">Marks:</label><br>
+    <input type="number" id="marks" name="marks" step="0.01" required><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+
+</html>
