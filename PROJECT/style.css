@@ -1,0 +1,476 @@
+/* =============================================
+   CSS Variables
+   ============================================= */
+:root {
+    --verdigris: #339989;
+    --verdigris-light: rgba(51, 153, 137, 0.15);
+    --onyx: #2d2d2d;
+    --onyx-light: rgba(45, 45, 45, 0.85);
+    --bg: #f5f5f5;
+    --white: #ffffff;
+    --text: #333333;
+    --text-muted: #555555;
+    --border: #dddddd;
+    --success-bg: #e8f5e9;
+    --success-text: #2e7d32;
+    --error-bg: #ffebee;
+    --error-text: #c62828;
+}
+
+/* =============================================
+   Reset & Base
+   ============================================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dashboard/admin pages — fixed header offset */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+    min-height: 100vh;
+    margin: 0;
+    padding: 110px 20px 20px 20px;
+}
+
+/* Login/signup pages use flexbox centering via their wrapper classes */
+
+/* =============================================
+   Typography
+   ============================================= */
+h1 {
+    color: var(--text);
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--verdigris);
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: var(--verdigris);
+    font-size: 24px;
+    margin: 20px 0 15px 0;
+}
+
+h3 {
+    color: var(--text-muted);
+    font-size: 18px;
+    margin: 15px 0 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* =============================================
+   Fixed Header Bar
+   ============================================= */
+header.welcome-header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90px;
+    background: var(--onyx);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 32px;
+}
+
+.header-content h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+    border-bottom: none;
+    padding-bottom: 0;
+    color: white;
+}
+
+.logout-btn {
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+    margin-left: 24px;
+}
+
+.logout-btn:hover {
+    background: var(--verdigris);
+    color: white;
+    text-decoration: none;
+}
+
+/* Fallback for plain header (admin.php) */
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+header a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* =============================================
+   Container
+   ============================================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+div {
+    margin: 10px 0;
+}
+
+/* =============================================
+   Forms
+   ============================================= */
+label {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="name"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px 0;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="name"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--verdigris);
+    box-shadow: 0 0 8px var(--verdigris-light);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* =============================================
+   Buttons
+   ============================================= */
+input[type="submit"],
+button,
+.btn {
+    background: var(--verdigris);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+input[type="submit"]:hover,
+button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(51, 153, 137, 0.4);
+}
+
+input[type="submit"]:active,
+button:active {
+    transform: translateY(0);
+}
+
+/* =============================================
+   Links
+   ============================================= */
+a {
+    color: var(--verdigris);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 5px;
+}
+
+a:hover {
+    color: var(--onyx);
+    text-decoration: underline;
+}
+
+/* =============================================
+   Tables
+   ============================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+    background: var(--onyx);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover {
+    background: var(--bg);
+}
+
+table a {
+    margin: 0 3px;
+    font-weight: 600;
+}
+
+/* =============================================
+   Feedback Messages
+   ============================================= */
+p[style*="color:green"],
+.success-message {
+    background: var(--success-bg);
+    color: var(--success-text);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid var(--success-text);
+    margin: 15px 0;
+}
+
+p[style*="color:red"],
+.error-message {
+    background: var(--error-bg);
+    color: var(--error-text);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid var(--error-text);
+    margin: 15px 0;
+}
+
+p[style*="color:green"] a,
+p[style*="color:red"] a {
+    font-weight: 600;
+}
+
+/* =============================================
+   Navigation
+   ============================================= */
+nav {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--verdigris);
+    color: white;
+    text-decoration: none;
+}
+
+/* =============================================
+   Login / Signup Forms
+   Centered layout — these pages don't use the
+   fixed header so they need their own centering.
+   ============================================= */
+.login-form,
+.signup-form,
+.admin-login-form {
+    width: 100%;
+    max-width: 400px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    position: relative;
+    top: 10vh;
+}
+
+.login-form h2,
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-form form,
+.signup-form form {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.login-form input[type="submit"],
+.signup-form input[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-form a,
+.signup-form a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* =============================================
+   Floating Action Button
+   ============================================= */
+.floating-plus {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    width: 60px;
+    height: 60px;
+    background: var(--verdigris);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.floating-plus:hover {
+    background: var(--onyx);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+    text-decoration: none;
+    color: white;
+}
+
+.floating-plus span {
+    display: block;
+    line-height: 1;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    margin-top: -2px;
+}
+
+/* =============================================
+   Responsive
+   ============================================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+
+    table { font-size: 14px; }
+    table th,
+    table td { padding: 10px; }
+
+    .container { padding: 20px; }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="name"],
+    textarea {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body { padding: 10px; }
+
+    header { padding: 15px; }
+    header h1 { font-size: 20px; }
+
+    .container {
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+    h1 { font-size: 20px; }
+    h2 { font-size: 16px; }
+
+    table { font-size: 12px; }
+    table th,
+    table td { padding: 8px; }
+
+    input[type="submit"],
+    button,
+    .btn {
+        width: 100%;
+        padding: 10px;
+    }
+
+    a {
+        display: block;
+        margin: 5px 0;
+    }
+}
